@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennywise - Budget App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="app-title">Pennywise</h1>
+            <button id="toggle-theme-btn">🌙 Dark Mode</button>
+        </header>
+        <main>
+            <section class="expense-form">
+                <input type="text" id="expense-description" placeholder="Description" />
+                <input type="number" id="expense-amount" placeholder="Amount" />
+                <select id="expense-category">
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                </select>
+                <button id="add-expense-btn">Add Expense</button>
+            </section>
+
+            <section class="expense-summary">
+                <h2>Total Expenses: $<span id="total-expenses">0.00</span></h2>
+                <div class="filters">
+                    <button data-filter="all" class="filter-btn active">All</button>
+                    <button data-filter="food" class="filter-btn">Food</button>
+                    <button data-filter="transport" class="filter-btn">Transport</button>
+                    <button data-filter="entertainment" class="filter-btn">Entertainment</button>
+                    <button data-filter="other" class="filter-btn">Other</button>
+                </div>
+            </section>
+
+            <ul id="expense-list"></ul>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
